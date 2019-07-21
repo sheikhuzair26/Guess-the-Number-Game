@@ -1,6 +1,4 @@
 
-let background = document.body.style.backgroundImage;
-
 function easyGame() {
     document.querySelector("#easyGuess").style = "display : flex;";
     document.querySelector("#easyButton").style = "display : flex;";
@@ -9,8 +7,7 @@ function easyGame() {
     document.querySelector("h1").style = "display : none;";
     document.querySelector("h2").style = "display : none;";
     document.querySelector("h3").style = "display : flex;";
-
-      background = "url('pop2.jpg')";
+    document.body.style.backgroundImage = "url('pop2.jpg')";
 }
 function mediumGame() {
     document.querySelector("#mediumGuess").style = "display : flex;";
@@ -20,8 +17,7 @@ function mediumGame() {
     document.querySelector("h1").style = "display : none;";
     document.querySelector("h2").style = "display : none;";
     document.querySelector("h3").style = "display : flex;";
-
-    background = "url('amazing.jpg')";
+    document.body.style.backgroundImage = "url('amazing.jpg')";
 }
 function hardGame() {
     document.querySelector("#hardGuess").style = "display : flex;";
@@ -31,8 +27,7 @@ function hardGame() {
     document.querySelector("h1").style = "display : none;";
     document.querySelector("h2").style = "display : none;";
     document.querySelector("h3").style = "display : flex;";
-
-    background = "url('aside.jpg')";
+    document.body.style.backgroundImage = "url('aside.jpg')";
 }
 
 let randomIndexEasy = parseInt(Math.random() * 100);

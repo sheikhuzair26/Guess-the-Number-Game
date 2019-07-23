@@ -131,4 +131,4 @@ function hardFunction() {
             wrongGuessNumber++;
         };
     };
-};
+}; 

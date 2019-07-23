@@ -1,5 +1,14 @@
 let wrongGuessNumber = 0;
 
+let randomIndexEasy = parseInt(Math.random() * 100);
+let randomIndexMedium = parseInt(Math.random() * 500);
+let randomIndexHard = parseInt(Math.random() * 1000);
+
+let userGuessArr = [];
+let attempts = 1;
+let userGuess = parseInt(document.querySelector("#attempts").value);
+// let inputValue = document.querySelector("#attempts").innerHTML = easyGuess;
+
 function general() {
     document.querySelector("#mainSec").style = "display : none;";
     document.querySelector("footer").style = "display : none;";
@@ -13,7 +22,6 @@ function backFunction() {
     window.location.reload();
 }
 
-
 function easyGame() {
     general();
     document.querySelector("#easyGuess").style = "display : flex;";
@@ -23,7 +31,6 @@ function easyGame() {
     document.querySelector("#thirdPopSec p").style = "display : none;";
     document.querySelector("#easyBack").style = "display : flex;";
     document.body.style.backgroundImage = "url('pop2.jpg')";
-
 }
 function mediumGame() {
     general();
@@ -33,7 +40,7 @@ function mediumGame() {
     document.querySelector("#secondPopSec p").style = "display : flex;";
     document.querySelector("#thirdPopSec p").style = "display : none;";
     document.querySelector("#mediumBack").style = "display : flex;"
-    document.body.style.backgroundImage = "url('amazing.jpg')";
+    document.body.style.backgroundImage = "url('backkk.jpeg')";
 }
 function hardGame() {
     general();
@@ -46,15 +53,21 @@ function hardGame() {
     document.body.style.backgroundImage = "url('aside.jpg')";
 }
 
-let randomIndexEasy = parseInt(Math.random() * 100);
-let randomIndexMedium = parseInt(Math.random() * 500);
-let randomIndexHard = parseInt(Math.random() * 1000);
 
+function attemptsCount() {
+    userGuessArr.push(attempts);
+    document.querySelector("#attempts").innerHTML = "Your attempts: " + attempts;
+    attempts++;
+    document.querySelector("#attempts").style = "display : flex;";
+}
 
-function easyFunction() {
+function easyFunction() {                       //pop up Page Easy
+
+    attemptsCount();
 
     let name = parseInt(document.querySelector("#easyGuess").value);
     console.log(randomIndexEasy);
+
 
     if (name === randomIndexEasy) {
         alert("CongRatulations You Won! Your Wrong Guess are " + wrongGuessNumber);
@@ -73,7 +86,9 @@ function easyFunction() {
     };
 };
 
-function mediumFunction() {
+function mediumFunction() {          //Pop Up page Medium   
+
+    attemptsCount();
 
     let name = parseInt(document.querySelector("#mediumGuess").value);
     console.log(randomIndexMedium);
@@ -95,6 +110,8 @@ function mediumFunction() {
 };
 
 function hardFunction() {
+
+    attemptsCount();
 
     let name = parseInt(document.querySelector("#hardGuess").value);
     console.log(randomIndexHard);

@@ -9,8 +9,9 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c6f6b3ca4d.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Courgette|Dancing+Script|Indie+Flower|Lobster|Oswald|Pacifico|Permanent+Marker&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -32,6 +33,7 @@
     <section id="firstPopSec">
         <main id="firstPopMain">
             <h3>Find the Guess Number!</h3>
+            <p id="attempts" onclick="easyFunction"></p>
             <p>Find the Guess Number from 1 to 100</p>
             <input type="number" id="easyGuess" autofocus required placeholder="Enter the Number">
             <button type="button" id="easyButton" onclick="easyFunction()"> Guess </button>
@@ -46,6 +48,7 @@
             <p>Find the Guess Number from 1 to 500</p>
             <input type="number" id="mediumGuess" autofocus placeholder="Enter the Number">
             <button type="buton" id="mediumButton" onclick="mediumFunction()"> Guess </button>
+            <p id="attempts" onclick="mediumFunction()"></p>
             <button type="button" id="mediumBack" onclick="backFunction()"> Back </button>
 
         </main>
@@ -58,6 +61,7 @@
             <p>Find the Guess Number from 1 to 1000</p>
             <input type="number" id="hardGuess" autofocus placeholder="Enter the Number">
             <button type="button" id="hardButton" onclick="hardFunction()"> Guess </button>
+            <p id="attempts" onclick="hardFunction()"></p>
             <button type="button" id="hardBack" onclick="backFunction()"> Back </button>
 
         </main>
